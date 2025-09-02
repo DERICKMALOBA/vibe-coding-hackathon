@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Buddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Study Buddy</h1>
+    </header>
+    <main>
+        <section id="input-section">
+            <textarea id="notes-input" placeholder="Paste your notes here..."></textarea>
+            <button id="generate-button">Generate Flashcards</button>
+        </section>
+        <section id="flashcard-section">
+            <!-- Flashcards will be displayed here -->
+            <button id="save-flashcards-button" style="display: none; margin-top: 20px;">Save Generated Flashcards</button>
+        </section>
+        <section id="dashboard-section">
+            <h2>Saved Flashcards</h2>
+            <div id="saved-flashcards">
+                <!-- Saved flashcards will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

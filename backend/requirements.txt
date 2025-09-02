@@ -1,0 +1,12 @@
+Flask
+requests
+transformers
+beautifulsoup4
+supabase
+umap-learn
+scikit-learn
+gunicorn
+flask-cors
+spacy
+sentence-transformers
+python-dotenv
