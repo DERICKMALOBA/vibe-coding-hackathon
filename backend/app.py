@@ -162,7 +162,7 @@ def save_flashcards():
 
     try:
         for card in flashcards:
-            supabase.table("flashcards").insert({"question": card["question"], "answer": card["answer"], "userId": user_id}).execute()
+            supabase.table("flashcards").insert({"question": card["question"], "answer": card["answer"], "userid": user_id}).execute()
         return jsonify({"message": "Flashcards saved successfully"}), 201
     except Exception as e:
         print(f"Error saving flashcards to Supabase: {e}")
@@ -173,7 +173,7 @@ def get_flashcards():
     user_id = request.args.get('userId', 'anonymous') # Get userId from query parameter, default to anonymous
 
     try:
-        response = supabase.table("flashcards").select("id, question, answer, userId, created_at").eq("userId", user_id).execute()
+        response = supabase.table("flashcards").select("id, question, answer, userid, created_at").eq("userid", user_id).execute()
         flashcards = response.data
         return jsonify({"flashcards": flashcards}), 200
     except Exception as e:
